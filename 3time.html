@@ -42,31 +42,46 @@
 
     .carousel .cover {
         width: 100%;
-        height: 800px;
+        height: 600px;
         position: absolute;
 
-        z-index: 2;
+       
+
+        z-index: 1;
         top: 0;
         background-color: rgba(0, 0, 0, 0.591);
 
 
     }
 
-    .carousel-inner{
-        top:0;
+    .carousel-inner {
+        top: 0;
+    }
+
+
+
+    .menu {
+        z-index: 1000;
     }
 
     .navbar {
         top: 0;
         left: 0;
-        z-index: 100;
-        background-color:transparent;
-        /* overflow: hidden; */
-        /* background-image:; */
-        /* background-position: center; */
-        /* background-repeat: no-repeat; */
-        /* width: 200px; */
-        /* height: 50px; */
+        position: relative;
+        z-index: 10001;
+
+        /* background-color: rgb(31, 31, 31, .7); */
+   
+
+
+
+
+    }
+
+    .menu .bg-dark {
+        background-color: transparent;
+        opacity: 0;
+        color: white;
 
     }
 
@@ -81,29 +96,40 @@
         width: 200px;
     }
 
-    .menu .bg-dark {
-        background-color: transparent;
-        opacity: 0;
-        color: white;
 
-    }
 
-    .navbar-nav a {
+    .navbar-nav .nav-item {
         font-size: 20px;
-        padding: 10px 12px;
+        padding: 0px 10px;
+        margin: 0px;
     }
 
-    .navbar-nav:last-child,
-    {
+    .nav-link:focus {
+        /* box-sizing: content-box; */
+        outline: 3px dashed rgb(45, 137, 243);
+    }
+
+    /* tag不需要outline */
+    .tag .nav-link:focus {
+        /* box-sizing: content-box; */
+        outline: 0px dashed rgb(45, 137, 243);
+    }
+
+
+
+
+    .navbar-nav:last-child {
         /* text-decoration: none; */
-        font-size: 16px;
-        padding: 10px 12px;
+        /* font-size: 16px; */
+
         /* color: tomato; */
     }
 
-    .navbar-nav:last-child a{
-        padding: 10px 0 10px 12px;
-    } 
+    .lag a {
+        padding-bottom: 50px !important;
+    }
+
+
 
 
 
@@ -145,6 +171,61 @@
 
     .dropdown-toggle:hover::after {
         border-bottom: .3em solid tomato;
+    }
+
+
+    .dropdown-menu.bg-warningtrans {
+        background-color: #ffc107a8;
+        z-index: 10;
+        padding: 0;
+        margin: 0;
+        /* border-radius: none!important; */
+        /* translate: .s .s; */
+    }
+
+
+
+
+
+
+
+
+
+    .dropdown-item:hover {
+
+        background-color: rgba(255, 99, 71, 0.60) !important;
+        /* z-index:10000; */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    li.nav-item {
+        font-weight: 200;
+        font-size: 1.2rem;
+    }
+
+
+
+    li.lag.nav-item a {
+        font-weight: 200;
+        font-size: 1rem;
+        padding: 0;
+        margin: auto;
+        /* height: 100%; */
+    }
+
+    .dropdown-menu .dropdown-items {
+        font-size: .8rem;
     }
 
 
@@ -308,104 +389,92 @@
 
         <div id="carouselExampleIndicators" class="carousel slide postion-relative" data-ride="carousel">
             <nav class="navbar navbar-expand-lg navbar-light  text-white  pr-0 px-2">
-                <a class="navbar-brand" href="#">
+                <!-- logo -->
+                <a class="navbar-brand" href="3time.html">
                     <img src="3timelogo.png" alt="回首頁">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-        
+
+
                 <div class="collapse navbar-collapse  " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto ">
-                        <li class="nav-item d-none">
-                            <a class="nav-link" href="#"> home <span class="sr-only">(current)</span></a>
-                        </li>
-        
-                        <li class="nav-item dropdown text-white ">
+
+
+                        <li class="nav-item dropdown active outline text-white ">
                             <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none text-white"
                                 href="#" id="navbarDropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 電商名單
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
+
                         </li>
-        
-                        <li class="nav-item dropdown">
+
+                        <li class="nav-item dropdown active outline">
                             <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none  text-decoration-none text-white "
                                 href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 業者列表
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-menu bg-warningtrans rounded-0" aria-labelledby="navbarDropdown2">
+                                <a class="dropdown-item text-white" href="#">電子票券</a>
+                                <a class="dropdown-item text-white" href="#">行動支付</a>
+                                <a class="dropdown-item text-white" href="#">信用卡</a>
                             </div>
                         </li>
-        
-                        <li class="nav-item dropdown">
+
+                        <li class="nav-item dropdown active outline">
                             <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none  text-decoration-none text-white"
                                 href="#" id="navbarDropdown_3" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 常見問答
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown_3">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
+
                         </li>
-        
-                        <li class="nav-item dropdown">
+
+                        <li class="nav-item dropdown active outline">
                             <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none  text-decoration-none text-white"
                                 href="#" id="navbarDropdown_4" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 振興再加碼
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown_4">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-menu bg-warningtrans rounded-0 " aria-labelledby="navbarDropdown_4">
+                                <a class="dropdown-item text-white" href="#">GOGORO騎回家</a>
+                                <a class="dropdown-item text-white" href="#">振興加碼優惠</a>
+
                             </div>
                         </li>
-        
-                        <li class="nav-item dropdown">
+
+                        <li class="nav-item dropdown active outline">
                             <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none  text-decoration-none text-white"
                                 href="#" id="navbarDropdown_5" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 弱勢資格查詢
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown_5">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+
+                        </li>
+
+                        <li class="lag my-auto nav-item dropdown active outline pb-2">
+                            <div class="lag-g ">
+                                <a class="nav-link d-inline text-reset" href="#">中</a>|
+                                <a class="nav-link d-inline text-reset" href="#">En</a>
                             </div>
                         </li>
-        
-                        <li class="nav-item my-auto ">
-                            <a class="nav-link d-inline text-reset" href="#">中</a>|
-                            <a class="nav-link d-inline text-reset" href="#">En</a>
-                        </li>
-        
-        
+
+
                     </ul>
-        
-        
-        
+
+
+
                 </div>
-        
-        
+
+
             </nav>
+
+
 
 
 
@@ -439,71 +508,72 @@
                 <span class="sr-only d-none">Next</span>
             </a> -->
 
+            <div class="main position-absolute d-flex flex-column justify-content-center align-content-center mb-5">
+                <div class="color-text d-flex  justify-content-center m-auto">
+                    <img class="main-logo my-4" src="main-title.png" alt="振興三倍券" srcset="">
+                </div>
+                <div class="cardg row mx-0">
+        
+                    <div class="carditem ml-auto col-12 col-md-1 p-0 m-4">
+                        <div class="cardimg border-0">
+                            <img src="main1.png" class="">
+        
+                        </div>
+                    </div>
+                    <div class="carditem col-12 col-md-1 p-0 m-4">
+                        <div class="cardimg border-0">
+                            <img src="main2.png" class="">
+        
+                        </div>
+                    </div>
+                    <div class="carditem col-12 col-md-1 p-0 m-4">
+                        <div class="cardimg border-0">
+                            <img src="main3.png" class="">
+        
+                        </div>
+                    </div>
+                    <div class="carditem mr-auto col-12 col-md-1 p-0 m-4">
+                        <div class="cardimg border-0">
+                            <img src="main4.png" class="">
+        
+                        </div>
+                    </div>
+        
+        
+        
+                </div>
+                <div class="main-text row  mx-0 justify-content-center align-items-center  h1 text-white ">
+                    <p>
+                        綁定數位三倍券
+        
+                        <a class="text-white " href="#">
+                            GOGORO好運騎回家
+                            <div class="gogoroimg d-inline ml-3">
+                                <img class="d-inline" src="main-gogoro.png" alt="gogor帶回家">
+                            </div>
+                        </a>
+                    </p>
+        
+                </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            </div>
+
 
 
         </div>
 
         
     </div>
-
-
-
-
-
-    <div class="main position-absolute d-flex flex-column justify-content-center align-content-center mb-5">
-        <div class="color-text d-flex  justify-content-center m-auto">
-            <img class="main-logo my-4" src="main-title.png" alt="振興三倍券" srcset="">
-        </div>
-        <div class="cardg row mx-0">
-
-            <div class="carditem ml-auto col-12 col-md-1 p-0 m-4">
-                <div class="cardimg border-0">
-                    <img src="main1.png" class="">
-
-                </div>
-            </div>
-            <div class="carditem col-12 col-md-1 p-0 m-4">
-                <div class="cardimg border-0">
-                    <img src="main2.png" class="">
-
-                </div>
-            </div>
-            <div class="carditem col-12 col-md-1 p-0 m-4">
-                <div class="cardimg border-0">
-                    <img src="main3.png" class="">
-
-                </div>
-            </div>
-            <div class="carditem mr-auto col-12 col-md-1 p-0 m-4">
-                <div class="cardimg border-0">
-                    <img src="main4.png" class="">
-
-                </div>
-            </div>
-
-
-
-        </div>
-        <div class="main-text row  mx-0 justify-content-center align-items-center  h1 text-white ">
-            <p>
-                綁定數位三倍券
-
-                <a class="text-white " href="#">
-                    GOGORO好運騎回家
-                    <div class="gogoroimg d-inline ml-3">
-                        <img class="d-inline" src="main-gogoro.png" alt="gogor帶回家">
-                    </div>
-                </a>
-            </p>
-
-        </div>
-
-
-
-    </div>
-
-
-
 
 
 
