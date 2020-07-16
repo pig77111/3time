@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>電商名單</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.css">
+</head>
+<style>
+    body {
+        font-size: 13px;
+        background-color: rgb(204, 201, 201);
+        width: 100%;
+    }
+
+
+
+    /* 背景 */
+    .carousel {
+        width: 100%;
+        height: 500px;
+        z-index: 0;
+        overflow: hidden;
+        padding: 0 0 0 0px;
+    }
+
+    .carousel .cover {
+        width: 100%;
+        height: 500px;
+        position: absolute;
+
+        /* overflow: hidden; */
+
+        z-index: 1;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.591);
+
+
+    }
+
+    .carousel-inner {
+        top: 0;
+    }
+
+
+
+    .menu {
+        z-index: 1000;
+    }
+
+    .navbar {
+        top: 0;
+        left: 0;
+        position: relative;
+        z-index: 10001;
+        background-color: rgb(31, 31, 31, .7);
+        /* overflow: hidden; */
+        /* background-image:; */
+        /* background-position: center; */
+        /* background-repeat: no-repeat; */
+        /* width: 200px; */
+        /* height: 50px; */
+
+
+
+    }
+
+    .menu .bg-dark {
+        background-color: transparent;
+        opacity: 0;
+        color: white;
+
+    }
+
+    .navbar-brand {
+        /* width: 200px; */
+        padding: 5px;
+
+    }
+
+    .navbar-brand img {
+        height: 65px;
+        width: 200px;
+    }
+
+
+
+    .navbar-nav .nav-item {
+        font-size: 20px;
+        padding: 0px 10px;
+        margin: 0px;
+    }
+
+    .nav-link:focus {
+        /* box-sizing: content-box; */
+        outline: 3px dashed rgb(45, 137, 243);
+    }
+
+    /* tag不需要outline */
+    .tag .nav-link:focus {
+        /* box-sizing: content-box; */
+        outline: 0px dashed rgb(45, 137, 243);
+    }
+
+
+
+
+    .navbar-nav:last-child {
+        /* text-decoration: none; */
+        /* font-size: 16px; */
+
+        /* color: tomato; */
+    }
+
+    .lag a {
+        padding-bottom: 50px !important;
+    }
+
+
+
+
+
+    .dropdown-toggle:hover {
+        display: block;
+        margin: 0;
+        padding: 5px;
+
+
+        /* vertical-align: 0px; */
+
+        /* width: 100%; */
+        /* height: 2px; */
+
+        /* background-color:tomato; */
+        border-bottom: 2px solid tomato;
+        /* border-top: 0; */
+        /* border-left: 3px solid transparent; */
+    }
+
+
+
+    .dropdown-toggle::after {
+        width: 3px;
+        height: 3px;
+        /* padding-bottom: 3px; */
+
+
+        display: flex;
+        margin: auto;
+        vertical-align: .255em;
+        content: "";
+        border-top: 0;
+        border-right: .3em solid transparent;
+        border-bottom: .3em solid transparent;
+        border-left: .3em solid transparent;
+        translate: 1s 1s 1s;
+    }
+
+    .dropdown-toggle:hover::after {
+        border-bottom: .3em solid tomato;
+    }
+
+
+    .dropdown-menu.bg-warningtrans {
+        background-color: #ffc107a8;
+        z-index: 10;
+        /* translate: .s .s; */
+    }
+
+
+
+
+
+
+
+
+
+    .dropdown-item:hover {
+
+        background-color: rgba(255, 99, 71, 0.60) !important;
+        /* z-index:10000; */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    li.nav-item {
+        font-weight: 200;
+        font-size: 1.2rem;
+    }
+
+
+
+    li.lag.nav-item a {
+        font-weight: 200;
+        font-size: 1rem;
+        padding: 0;
+        margin: auto;
+        /* height: 100%; */
+    }
+
+    .dropdown-menu .dropdown-items {
+        font-size: .8rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .main {
+        top: 50px;
+        left: 0px;
+        right: 0px;
+        z-index: 5;
+        /* height: 600px; */
+
+    }
+
+    .mian-text {
+        font-size: 50px;
+        margin-top: -8s0px;
+        /* margin-bottom: 50px; */
+        left: 0;
+        right: 0;
+        z-index: 2;
+
+
+    }
+
+    .main-logo {
+        width: 35%;
+        height: 30%;
+        z-index: 10;
+    }
+
+    .main-text p,
+    a {
+        /* top: 320px; */
+
+        font-weight: 300;
+
+    }
+
+    .cardimg img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cardimg {
+        z-index: 1;
+        width: 131.3px;
+        height: 219.98px;
+    }
+
+    /* .tag.row{
+        border-width: 5px;
+    } */
+
+    .tag {
+
+        display: float;
+        width: calc(100% - 160px);
+
+
+        /* margin: 0; */
+        top: calc(30%);
+
+        margin: 0 80px 0 80px;
+        z-index: 10000;
+    }
+
+
+
+
+
+
+    .tag ul {
+        z-index: 4;
+    }
+
+
+    .tab-content {
+        z-index: 5;
+        margin: 0px;
+
+    }
+
+
+
+
+
+
+
+    .nav-tabs {
+        border-top: 5px solid #dee2e6;
+    }
+
+    .tag .row a {
+        font-weight: 400;
+    }
+
+
+    .fade {
+        transition: none;
+    }
+
+
+
+
+
+    .nav-tabs.text-tomato {
+        color: rgb(255, 71, 71) !important;
+    }
+
+    .nav-tabs .nav-link {
+        background-color: rgb(255, 71, 71);
+        color: #fff;
+        border: 1px solid transparent;
+        border-top-left-radius: 0rem;
+        border-top-right-radius: 0rem;
+    }
+
+    .h3 {
+
+        margin-bottom: 0rem !important;
+        /* font-weight: 500; */
+        /* line-height: 1.2; */
+
+    }
+
+
+
+
+    .nav-tabs .nav-link.active {
+        color: rgb(255, 71, 71);
+        background-color: #fff;
+        border-color: #dee2e6 #dee2e6 #fff;
+
+    }
+
+    .nav-link.active .outline {
+        box-sizing: content-box;
+        outline: 3px dashed rgb(45, 137, 243);
+        /* 顏色info */
+
+
+    }
+
+
+
+
+    /* 頁簽部分 */
+
+
+    .tab-pane p.text-center {
+        font-weight: 800;
+    }
+
+    .tab-content .tab-pane .a-btn {
+        width: 40px;
+        height: 40px;
+        background: gray;
+    }
+
+
+
+    .tag-item {
+        bottom: 0;
+        /* right: 0; */
+        /* left: 0; */
+        padding: 20px;
+        /* margin-top: auto; */
+        background-color: rgba(0, 0, 0, .6) !important;
+
+        width: 100%;
+    }
+
+    .tab-content .card:hover .tag-item {
+        background-color: black !important;
+
+    }
+
+    .tab-content .card:hover p.card-text {
+        text-decoration: underline;
+    }
+
+
+    .card {
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+    p.card-text {
+        font-weight: 300;
+        margin: 10px;
+        /* font-size: 15px; */
+    }
+
+    /* tag的字型 */
+
+
+    .tag-title {
+        font-size: 1.4rem;
+    }
+
+    .tag-article {
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+
+    /* table */
+    table thead th {
+        /* text-decoration: ; */
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    table tbody {
+        font-weight: 300;
+        font-size: 1rem;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .footer {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footer p {
+        /* padding-top: 20px; */
+        font-size: 12px;
+        font-weight: 100;
+    }
+
+    .footer a {
+        text-decoration: underline;
+    }
+</style>
+
+
+
+
+<body class="postion-relative">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="menu d-flex flex-column">
+
+
+
+        <div id="carouselExampleIndicators" class="carousel slide postion-relative" data-ride="carousel">
+
+
+            <!-- menu -->
+            <nav class="navbar navbar-expand-lg navbar-light  text-white  pr-0 px-2">
+                <!-- logo -->
+                <a class="navbar-brand" href="3time.html">
+                    <img src="3timelogo.png" alt="回首頁">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto ">
+
+
+                        <li class="nav-item dropdown active outline text-white ">
+                            <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none text-white"
+                                href="#" id="navbarDropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                電商名單
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item dropdown active outline">
+                            <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none  text-decoration-none text-white "
+                                href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                業者列表
+                            </a>
+                            <div class="dropdown-menu bg-warningtrans " aria-labelledby="navbarDropdown2">
+                                <a class="dropdown-item text-white" href="#">電子票券</a>
+                                <a class="dropdown-item text-white" href="#">行動支付</a>
+                                <a class="dropdown-item text-white" href="#">信用卡</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown active outline">
+                            <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none  text-decoration-none text-white"
+                                href="#" id="navbarDropdown_3" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                常見問答
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item dropdown active outline">
+                            <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none  text-decoration-none text-white"
+                                href="#" id="navbarDropdown_4" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                振興再加碼
+                            </a>
+                            <div class="dropdown-menu bg-warningtrans " aria-labelledby="navbarDropdown_4">
+                                <a class="dropdown-item text-white" href="#">GOGORO騎回家</a>
+                                <a class="dropdown-item text-white" href="#">振興加碼優惠</a>
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown active outline">
+                            <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none  text-decoration-none text-white"
+                                href="#" id="navbarDropdown_5" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                弱勢資格查詢
+                            </a>
+
+                        </li>
+
+                        <li class="lag my-auto nav-item dropdown active outline pb-2">
+                            <div class="lag-g ">
+                                <a class="nav-link d-inline text-reset" href="#">中</a>|
+                                <a class="nav-link d-inline text-reset" href="#">En</a>
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+
+
+                </div>
+
+
+            </nav>
+
+
+
+            <ol class="carousel-indicators d-none">
+                <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+            </ol>
+
+
+            <div class="carousel-inner position-absolute ">
+                <div class="carousel-item active">
+                    <img src="https://picsum.photos/1200/600/?random=1" class="d-block w-100">
+                </div>
+
+            </div>
+
+            <div class="cover ">
+                <!-- 遮照 -->
+
+            </div>
+
+
+            <!-- 電商名單 大字title -->
+            <div class="main position-absolute d-flex flex-column justify-content-center align-content-center mb-5">
+
+                <div class="main-text row  mx-0 justify-content-center align-items-center  h1 text-white my-4 pt-4">
+                    <p>
+                        電商名單
+
+                    </p>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- <a class="carousel-control-prev d-none" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next d-none" href="#carouselExampleIndicators" role="button"
+                data-slide="next d-none">
+                <span class="carousel-control-next-icon d-none" aria-hidden="true"></span>
+                <span class="sr-only d-none">Next</span>
+            </a> -->
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="blank bg-info" style="height: 1200px; z-index:-1;"></div>
+
+
+    <!-- 浮起來 -->
+    <div class="tag bg-white position-absolute">
+
+
+
+        <div class="container">
+
+            <div class="row  ">
+
+                <div class="container ">
+                    <nav aria-label="breadcrumb  ">
+                        <ol class="breadcrumb bg-white rounded-0 border-bottom">
+                            <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                            <li class="breadcrumb-item"><a href="#">電商名單</a></li>
+
+
+
+                        </ol>
+                        <i class="fas fa-print"></i>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="tag-title h5 text-danger row justify-content-center">
+                電商名單介紹說明
+            </div>
+
+            <div class="tag-article row justify-content-center">
+                <ul>
+                    <li>振興三倍券消費以實體通路為主，網路、APP或傳真消費僅限藝文展演、體育賽事及旅遊商品之平台為限，以下名單係經主管機關審核通過，民眾可使用已綁定之數位三倍券累積消費之名單。
+                    </li>
+
+                    <li>本名單每月1日、15日更新，民眾可於消費前，點選網站內電商適用之三倍券標章或至本網站確認為有效名單之業者，以累積消費金額。</li>
+
+
+                    <li class="formsearch list-unstyled">
+                        <form class="form-inline bg-light">
+                            <label for="keyword" id="keyword">關鍵字搜尋:</label>
+
+                            <input class="form-control mr-sm-2 rounded-0" type="search" placeholder="Search"
+                                aria-label="Search" id="keyword">
+
+
+                            <button type="submit" class="btn btn-warning text-white rounded-0 btn-sm m-2">送出結果</button>
+                            <button type="submit" class="btn btn-danger text-white rounded-0 btn-sm m-2">清除</button>
+                        </form>
+
+                    </li>
+                </ul>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="row ">
+                <table class="table  border border-top border-danger table-striped  mx-5">
+                    <thead class="text-danger ">
+                        <tr class="rounded ">
+                            <th scope="col">識別標章編號
+                            </th>
+                            <th scope="col">提供機關名稱
+                            </th>
+                            <th scope="col">特店對外名稱
+                            </th>
+                            <th scope="col">特店網址
+                            </th>
+                            <th scope="col">啟用日期
+
+                            </th>
+                            <th scope="col">終止日期
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td><a href="https://www.artsticket.com.tw/">https://www.artsticket.com.tw/</a></td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+                        <tr>
+                            <td scope="row">文10000</td>
+
+
+                            <td>文化部</td>
+                            <td>兩廳院售票</td>
+                            <td>https://www.artsticket.com.tw/</td>
+                            <td>20200715</td>
+                            <td>20201231</td>
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+
+
+
+
+
+            <div class="pagination row justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="footer bg-dark h-50 p-3">
+        <p class="text-white py-2 m-1">
+            振興三倍券服務諮詢請洽 1988 免付費專線（服務時間 8:30 至 18:30 ），全年無休
+
+
+        </p>
+        <p class="text-white py-0 m-1">提供機關／
+            <a class="border-botton-info" href="#">經濟部中小企業處</a>
+            [2020] [振興三倍券網站發布之資訊]
+            |
+            <a class="border-botton-info" href="#">兌付要點</a>
+            |
+            <a class="border-botton-info" href="#">發放辦法</a>
+            |
+        <p class="text-white m-1">
+            此開放資料依
+            <a href="#">政府資料開放授權條款</a>
+            進行公眾釋出，使用者於遵守本條款各項規定之前提下，得利用之。</p>
+        </p>
+    </div>
+
+
+
+
+</body>
+
+
+
+
+
+</html>
