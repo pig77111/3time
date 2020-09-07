@@ -45,7 +45,7 @@
         height: 500px;
         position: absolute;
 
-        /* overflow: hidden; */
+       
 
         z-index: 1;
         top: 0;
@@ -250,7 +250,7 @@
 
     .mian-text {
         font-size: 50px;
-        margin-top: -8s0px;
+        margin-top: -80px;
         /* margin-bottom: 50px; */
         left: 0;
         right: 0;
@@ -262,7 +262,7 @@
     .main-logo {
         width: 35%;
         height: 30%;
-        z-index: 10;
+       
     }
 
     .main-text p,
@@ -280,17 +280,19 @@
 
     .cardimg {
         z-index: 1;
-        width: 131.3px;
-        height: 219.98px;
+
     }
 
-    /* .tag.row{
-        border-width: 5px;
-    } */
+    .cardimg img {
+        width: 100%;
+        height: 100%;
+    }
 
+
+    /* 電商tag大小 */
     .tag {
 
-        display: float;
+        /* display: float; */
         width: calc(100% - 160px);
 
 
@@ -433,6 +435,19 @@
 
     .tag-title {
         font-size: 1.4rem;
+        padding: 0 20px;
+        display: flex;
+    }
+
+    .tag-title::before, .tag-title::after{
+        content: '';
+        background-color: red ;
+        /* align-content: center; */
+        height: 1px;
+        /* color: black; */
+        /* width:350px; */
+        flex-grow: 1;
+
     }
 
     .tag-article {
@@ -543,7 +558,7 @@
                                 aria-expanded="false">
                                 業者列表
                             </a>
-                            <div class="dropdown-menu bg-warningtrans " aria-labelledby="navbarDropdown2">
+                            <div class="dropdown-menu bg-warningtrans rounded-0" aria-labelledby="navbarDropdown2">
                                 <a class="dropdown-item text-white" href="#">電子票券</a>
                                 <a class="dropdown-item text-white" href="#">行動支付</a>
                                 <a class="dropdown-item text-white" href="#">信用卡</a>
@@ -565,7 +580,7 @@
                                 aria-expanded="false">
                                 振興再加碼
                             </a>
-                            <div class="dropdown-menu bg-warningtrans " aria-labelledby="navbarDropdown_4">
+                            <div class="dropdown-menu bg-warningtrans rounded-0" aria-labelledby="navbarDropdown_4">
                                 <a class="dropdown-item text-white" href="#">GOGORO騎回家</a>
                                 <a class="dropdown-item text-white" href="#">振興加碼優惠</a>
 
@@ -702,7 +717,7 @@
                 </div>
             </div>
 
-            <div class="tag-title h5 text-danger row justify-content-center">
+            <div class="tag-title h5 text-danger mx-2 justify-content-center align-content-center">
                 電商名單介紹說明
             </div>
 
@@ -714,6 +729,14 @@
                     <li>本名單每月1日、15日更新，民眾可於消費前，點選網站內電商適用之三倍券標章或至本網站確認為有效名單之業者，以累積消費金額。</li>
 
 
+                    
+                </ul>
+
+
+
+            </div>
+            <div class=" search-box">
+                <ul>
                     <li class="formsearch list-unstyled">
                         <form class="form-inline bg-light">
                             <label for="keyword" id="keyword">關鍵字搜尋:</label>
@@ -728,7 +751,6 @@
 
                     </li>
                 </ul>
-
             </div>
 
 
@@ -744,9 +766,9 @@
 
 
             <div class="row ">
-                <table class="table  border border-top border-danger table-striped  mx-5">
-                    <thead class="text-danger ">
-                        <tr class="rounded ">
+                <table class="table  border border-secondary table-striped mx-5 ">
+                    <thead class=" text-danger rounded">
+                        <tr class=" border border-top border-secondary">
                             <th scope="col">識別標章編號
                             </th>
                             <th scope="col">提供機關名稱

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>首頁</title>
+    <title>首頁 home</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -248,7 +248,7 @@
 
 
     .main-logo {
-        width: 35%;
+        width: 50%;
         height: 30%;
 
     }
@@ -291,7 +291,7 @@
 
         width: calc(100% - 80px);
 
-        margin: -70px 40px 0;
+        margin: 0px 40px 0;
  
     }
 
@@ -457,6 +457,15 @@
                         </li>
 
                         <li class="nav-item dropdown active outline">
+                            <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none  text-decoration-none text-white "
+                                href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                振興地圖
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item dropdown active outline">
                             <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none  text-decoration-none text-white"
                                 href="#" id="navbarDropdown_3" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
@@ -470,6 +479,18 @@
                                 href="#" id="navbarDropdown_4" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 振興再加碼
+                            </a>
+                            <div class="dropdown-menu bg-warningtrans rounded-0 " aria-labelledby="navbarDropdown_4">
+                                <a class="dropdown-item text-white" href="#">GOGORO騎回家</a>
+                                <a class="dropdown-item text-white" href="#">振興加碼優惠</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown active outline">
+                            <a class="nav-link dropdown-toggle d-flex flex-column justify-content-center align-center text-decoration-none  text-decoration-none text-white"
+                                href="#" id="navbarDropdown_4" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                店家專區
                             </a>
                             <div class="dropdown-menu bg-warningtrans rounded-0 " aria-labelledby="navbarDropdown_4">
                                 <a class="dropdown-item text-white" href="#">GOGORO騎回家</a>
@@ -502,36 +523,10 @@
                 </div>
 
                 <div class="main position-absolute d-flex flex-column justify-content-center align-content-center mb-5">
-                    <div class="color-text d-flex  justify-content-center m-auto">
-                        <img class="main-logo my-4" src="main-title.png" alt="振興三倍券" srcset="">
-                    </div>
+                    
                     <div class="container">
                         <div class="cardg row mx-auto">
 
-                            <div class="carditem h-100  ">
-                                <div class="cardimg border-0">
-                                    <img src="main1.png" class="">
-
-                                </div>
-                            </div>
-                            <div class="carditem h-100  ">
-                                <div class="cardimg border-0">
-                                    <img src="main2.png" class="">
-
-                                </div>
-                            </div>
-                            <div class="carditem h-100 ">
-                                <div class="cardimg border-0">
-                                    <img src="main3.png" class="">
-
-                                </div>
-                            </div>
-                            <div class="carditem h-100  ">
-                                <div class="cardimg border-0">
-                                    <img src="main4.png" class="">
-
-                                </div>
-                            </div>
 
 
 
@@ -543,16 +538,7 @@
                         <div class="container">
                             <div class=" row justify-content-center align-items-center  text-white mb-4">
 
-                                <p>
-                                    綁定數位三倍券
-
-                                    <a class="text-white " href="#">
-                                        GOGORO好運騎回家
-                                        <div class="gogoroimg d-inline ml-3">
-                                            <img class="d-inline" src="main-gogoro.png" alt="gogor帶回家">
-                                        </div>
-                                    </a>
-                                </p>
+                            
 
 
                             </div>
@@ -626,61 +612,87 @@
 
     <div class="tag">
         <div class=" container ">
-            <div class="row ">
-                <ul class="nav nav-tabs w-100 border-warning " id="myTab" role="tablist">
-                    <li class="nav-item flex-md-grow-1 text-decoration-none " role="presentation">
-                        <a class="nav-link d-flex justify-content-center h3  text-center  text-tomato  border-white border-right active "
-                            id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                            aria-selected="true">
-                            <div class="outline p-3  ">
-                                信用卡優惠
-                            </div>
-                        </a>
-                    </li>
+
+            <div class="row">
+                <div class="color-text d-flex  justify-content-center m-auto">
+                    <img class="main-logo my-4" src="main-title.png" alt="振興三倍券" srcset="">
+                </div>
+                <div class="tab-pane show bg-white active " id="home" role="tabpanel" aria-labelledby="home-tab">
+                    
+                    <div class="nav  w-100 justify-content-center" id="myTab" role="tablist">
+                        <div class="nav-item  text-decoration-none " role="presentation">
+                            <a class="nav-link d-flex justify-content-center h3  text-center  text-tomato   active "
+                                id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                                aria-selected="true">
+                                
     
-                    <li class="nav-item flex-md-grow-1 text-decoration-none text-center" role="presentation">
-                        <a class="nav-link  d-flex justify-content-center h3  text-center text-tomato border-white border-right "
-                            id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                            aria-selected="false">
-                            <div class="outline p-3 ">
-                                電子票證優惠
-                            </div>
-                        </a>
-                    </li>
+                                <span class="badge badge-pill badge-light border border-danger text-danger outline px-5 ">信用卡優惠</span>
+                            </a>
+                        </div>
+        
+                        <div class="nav-item  text-decoration-none text-center" role="presentation">
+                            <a class="nav-link  d-flex justify-content-center h3  text-center text-tomato  "
+                                id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                                aria-selected="false">
+                                <span class="badge badge-pill badge-light border border-danger text-danger outline px-5 ">
+                                    電子票證優惠
+                                </span>
     
-                    <li class="nav-item flex-md-grow-1 text-decoration-none text-center  " role="presentation">
-                        <a class="nav-link  d-flex justify-content-center h3  text-center text-tomato border-white border-right"
-                            id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-                            aria-selected="false">
-                            <div class="outline p-3 ">
-                                行動支付優惠
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane  show bg-white active " id="home" role="tabpanel" aria-labelledby="home-tab">
+                            </a>
+                        </div>
+        
+                        <div class="nav-item  text-decoration-none text-center  " role="presentation">
+                            <a class="nav-link  d-flex justify-content-center h3  text-center text-tomato "
+                                id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                                aria-selected="false">
+                                <span class="badge badge-pill badge-light border border-danger text-danger outline px-5 ">
+                                    行動支付優惠
+                                </span>
     
-                        <p class="text-center h4 py-4">
-                            最高回饋 1500-1800元、或紅利點數、抽大獎
-                        </p>
+                            </a>
+                        </div>
+                        <div class="nav-item  text-decoration-none text-center  " role="presentation">
+                            <a class="nav-link  d-flex justify-content-center h3  text-center text-tomato "
+                                id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                                aria-selected="false">
+                                <span class="badge badge-pill badge-light border border-danger text-danger outline px-5 ">
+                                    紙本券
+                                </span>
     
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nostrum cupiditate
-                            vel dignissimos minus? Architecto sed totam adipisci quaerat, voluptates, libero quasi
-                            harum, aut aperiam ullam nisi? Omnis, minima amet?</p>
-                        <p>Sapiente nihil dicta incidunt ad expedita ut tenetur, fugiat voluptates ipsum animi
-                            perspiciatis blanditiis vel velit necessitatibus laboriosam eveniet laborum impedit ducimus.
-                            Eos reprehenderit optio mollitia, quia aliquid iusto dignissimos!</p>
-                        <p>Modi asperiores et, provident sed adipisci quibusdam amet incidunt expedita molestiae magnam
-                            qui totam cupiditate quam quod similique perferendis ullam perspiciatis sequi doloremque
-                            neque quaerat sapiente? Aspernatur dolore neque saepe.</p>
-                        <p>Aliquid exercitationem tenetur sequi dicta vero corporis quis officia dolorum qui expedita?
-                            Quis incidunt nam ratione laborum, ea voluptatem quo adipisci quia officia eveniet sunt
-                            excepturi deserunt blanditiis. Doloremque, beatae?</p>
-                        <p>Quisquam, ducimus. Ratione accusantium reprehenderit dolor blanditiis soluta autem voluptates
-                            earum delectus quia a laboriosam cum nihil vel ea laudantium at, quod ut assumenda? Harum
-                            nostrum nobis ea eos qui?</p>
+                            </a>
+                        </div>
                     </div>
+
+
+
+                    <p class="text-center h4 py-4">
+                        最高回饋 1500-1800元、或紅利點數、抽大獎
+                    </p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nostrum cupiditate
+                        vel dignissimos minus? Architecto sed totam adipisci quaerat, voluptates, libero quasi
+                        harum, aut aperiam ullam nisi? Omnis, minima amet?</p>
+                    <p>Sapiente nihil dicta incidunt ad expedita ut tenetur, fugiat voluptates ipsum animi
+                        perspiciatis blanditiis vel velit necessitatibus laboriosam eveniet laborum impedit ducimus.
+                        Eos reprehenderit optio mollitia, quia aliquid iusto dignissimos!</p>
+                    <p>Modi asperiores et, provident sed adipisci quibusdam amet incidunt expedita molestiae magnam
+                        qui totam cupiditate quam quod similique perferendis ullam perspiciatis sequi doloremque
+                        neque quaerat sapiente? Aspernatur dolore neque saepe.</p>
+                    <p>Aliquid exercitationem tenetur sequi dicta vero corporis quis officia dolorum qui expedita?
+                        Quis incidunt nam ratione laborum, ea voluptatem quo adipisci quia officia eveniet sunt
+                        excepturi deserunt blanditiis. Doloremque, beatae?</p>
+                    <p>Quisquam, ducimus. Ratione accusantium reprehenderit dolor blanditiis soluta autem voluptates
+                        earum delectus quia a laboriosam cum nihil vel ea laudantium at, quod ut assumenda? Harum
+                        nostrum nobis ea eos qui?</p>
+                </div>
+
+
+                <div class="tab-content" id="myTabContent">
+
+
+
+
+
     
     
     
